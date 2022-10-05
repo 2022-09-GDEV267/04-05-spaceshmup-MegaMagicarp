@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    static public Hero S; // Singleton                               // a
+    static public Hero S; // Singleton
 
 
 
@@ -21,7 +21,7 @@ public class Hero : MonoBehaviour
     {
         if (S == null)
         {
-            S = this; // Set the Singleton                                   // a
+            S = this; // Set the Singleton
         }
         else
         {
@@ -32,8 +32,8 @@ public class Hero : MonoBehaviour
     void Update()
     {
         // Pull in information from the Input class
-        float xAxis = Input.GetAxis("Horizontal");                            // b
-        float yAxis = Input.GetAxis("Vertical");                              // b
+        float xAxis = Input.GetAxis("Horizontal");
+        float yAxis = Input.GetAxis("Vertical");
 
         // Change transform.position based on the axes
         Vector3 pos = transform.position;
@@ -41,7 +41,7 @@ public class Hero : MonoBehaviour
         pos.y += yAxis * speed * Time.deltaTime;
         transform.position = pos;
 
-        // Rotate the ship to make it feel more dynamic                      // c
+        // Rotate the ship to make it feel more dynamic
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
     }
 }
