@@ -24,18 +24,18 @@ public class Main : MonoBehaviour
 
         // Invoke SpawnEnemy() once (in 2 seconds, based on default values)
         Invoke("SpawnEnemy", 1f / enemySpawnPerSecond);
-    }
+    }
 
     public void SpawnEnemy()
     {
         // Pick a random Enemy prefab to instantiate
         int ndx = Random.Range(0, prefabEnemies.Length);
-        GameObject go = Instantiate<GameObject>(prefabEnemies[ndx]);
+        GameObject go = Instantiate<GameObject>(prefabEnemies[ndx]);
 
         // Position the Enemy above the screen with a random x position
 
         float enemyPadding = enemyDefaultPadding;
-        if (go.GetComponent<BoundsCheck>() != null)
+        if (go.GetComponent<BoundsCheck>() != null)
         {                        // e
             enemyPadding = Mathf.Abs(go.GetComponent<BoundsCheck>().radius);
         }
@@ -57,5 +57,17 @@ public class Main : MonoBehaviour
         // Invoke SpawnEnemy() again
 
         Invoke("SpawnEnemy", 1f / enemySpawnPerSecond);
-    }
+    }
+
+    public void DelayedRestart(float delay)
+    {
+        // Invoke the Restart() method in delay seconds
+        Invoke("Restart", delay);
+    }
+
+    public void Restart()
+    {
+        // Reload _Scene_0 to restart the game
+        SceneManager.LoadScene("_Scene_0");
+    }
 }
