@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4518460965251267531}
   - component: {fileID: 3346822755286675804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 8941510876868177828}
   - {fileID: 5520561634173831500}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &3346822755286675804
 Rigidbody:
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 3597255506690774139}
   - component: {fileID: 3874163554289436980}
   - component: {fileID: 2752967791541908975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fuselage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4518460965251267531}
-  m_RootOrder: -1
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3597255506690774139
 MeshFilter:
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 8408235110020920537}
   - component: {fileID: 6809735559061620043}
   - component: {fileID: 2312696025036903790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4518460965251267531}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8408235110020920537
 MeshFilter:
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 6499323052250347497}
   - component: {fileID: 4222261894217276516}
   - component: {fileID: 5358107739590195396}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WingR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4518460965251267531}
-  m_RootOrder: -1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
 --- !u!33 &6499323052250347497
 MeshFilter:
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 6563344585053383082}
   - component: {fileID: 850812803301443246}
   - component: {fileID: 7618356388730271777}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WingL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4518460965251267531}
-  m_RootOrder: -1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
 --- !u!33 &6563344585053383082
 MeshFilter:

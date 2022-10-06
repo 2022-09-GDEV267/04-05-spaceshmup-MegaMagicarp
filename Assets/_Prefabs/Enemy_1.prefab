@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2609534693028887783}
   - component: {fileID: 5387929955968429927}
   - component: {fileID: 1109389802977223018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1190910467809695132}
-  m_RootOrder: -1
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2609534693028887783
 MeshFilter:
@@ -107,9 +107,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1190910467809695132}
   - component: {fileID: 2075103425776924190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ Transform:
   - {fileID: 7222497141131226557}
   - {fileID: 5230549118409385823}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2075103425776924190
 Rigidbody:
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 9025568414651817500}
   - component: {fileID: 7817544105787600262}
   - component: {fileID: 452644157908962781}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1190910467809695132}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9025568414651817500
 MeshFilter:

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 197515542323377256}
   - component: {fileID: 4956178392384398333}
   - component: {fileID: 5071588219305026765}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5272866998496925667}
-  m_RootOrder: -1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &197515542323377256
 MeshFilter:
@@ -107,9 +107,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5272866998496925667}
   - component: {fileID: 5395163549358827975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ Transform:
   - {fileID: 2670849091709549414}
   - {fileID: 9087262895857639857}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5395163549358827975
 Rigidbody:
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 1314033703331022709}
   - component: {fileID: 5639872164834805247}
   - component: {fileID: 3625194149202422668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Reactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5272866998496925667}
-  m_RootOrder: -1
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1314033703331022709
 MeshFilter:
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 3395982984547764428}
   - component: {fileID: 5165680556204053164}
   - component: {fileID: 7458941084433245361}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5272866998496925667}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3395982984547764428
 MeshFilter:
