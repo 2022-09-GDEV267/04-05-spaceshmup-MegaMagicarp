@@ -74,13 +74,14 @@ namespace ShmupPlus
             pos = tempPos;
         }
 
-        private void OnCollisionEnter(Collision coll)
+        void OnCollisionEnter(Collision coll)
         {
             GameObject otherGO = coll.gameObject;
             switch (otherGO.tag)
             {
                 case "ProjectileHero":
                     Projectile p = otherGO.GetComponent<Projectile>();
+
                     // If this Enemy is off screen, don't damage it.
                     if (!bndCheck.isOnScreen)
                     {
@@ -89,20 +90,15 @@ namespace ShmupPlus
                     }
 
                     // Hurt this Enemy
-                    ShowDamage();
-                    // Get the damage amount from the Main WEAP_DICT
+                    // Get the damage amount from the Main WEAP_DICT.
                     health -= Main.GetWeaponDefinition(p.type).damageOnHit;
+
                     if (health <= 0)
                     {
-                        // Tell the Main singleton that this ship was destroyed
-                        if (!notifiedOfDestruction)
-                        {
-                            Main.S.ShipDestroyed(this);
-                        }
-                        notifiedOfDestruction = true;
-                        // Destroy this enemy
+                        // Destroy this Enemy
                         Destroy(this.gameObject);
                     }
+
                     Destroy(otherGO);
                     break;
 
