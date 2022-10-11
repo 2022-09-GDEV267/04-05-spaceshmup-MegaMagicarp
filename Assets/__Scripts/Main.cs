@@ -3,18 +3,20 @@ using System.Collections.Generic;   // Required to use Lists or Dictionaries
 using UnityEngine;                  // Required for Unity
 using UnityEngine.SceneManagement;  // For loading & reloading of scenes
 
-
-
 public class Main : MonoBehaviour
 {
     static public Main S;                                // A singleton for Main
 
-    [Header("Set in Inspector")]
-    public GameObject[] prefabEnemies;              // Array of Enemy prefabs
+    static Dictionary<WeaponType, WeaponDefinition> WEAP_DICT;
+
+    [Header("Set in Inspector")]
+    public GameObject[] prefabEnemies;       // Array of Enemy prefabs
     public float enemySpawnPerSecond = 0.5f; // # Enemies/second
     public float enemyDefaultPadding = 1.5f; // Padding for position
 
-    private BoundsCheck bndCheck;
+    public WeaponDefinition[] weaponDefinitions;
+
+    private BoundsCheck bndCheck;
 
     void Awake()
     {
@@ -24,6 +26,14 @@ public class Main : MonoBehaviour
 
         // Invoke SpawnEnemy() once (in 2 seconds, based on default values)
         Invoke("SpawnEnemy", 1f / enemySpawnPerSecond);
+
+        // A generic Dictionary with WeaponType as the key
+        WEAP_DICT = new Dictionary<WeaponType, WeaponDefinition>();
+
+        foreach (WeaponDefinition def in weaponDefinitions)
+        {
+            WEAP_DICT[def.type] = def;
+        }
     }
 
     public void SpawnEnemy()
@@ -70,4 +80,29 @@ public class Main : MonoBehaviour
         // Reload _Scene_0 to restart the game
         SceneManager.LoadScene("_Scene_0");
     }
+
+    /// <summary>
+    /// Static function that gets a WeaponDefinition from the WEAP_DICT static
+    /// protected field of the Main class.
+    /// </summary>
+    /// <returns>The WeaponDefinition or, if there is no WeaponDefinition with
+    /// the WeaponType passed in, returns a new WeaponDefinition with a
+    /// WeaponType of none..</returns>
+    /// <param name="wt">The WeaponType of the desired WeaponDefinition</param>
+
+    static public WeaponDefinition GetWeaponDefinition(WeaponType wt)
+    {
+        // Check to make sure that the key exists in the Dictionary
+        // Attempting to retrieve a key that didn't exist, would throw an error,
+        // so the following if statement is important.
+
+        if (WEAP_DICT.ContainsKey(wt))
+        {
+            return (WEAP_DICT[wt]);
+        }
+
+        // This returns a new WeaponDefinition with a type of WeaponType.none,
+        // which means it has failed to find the right WeaponDefinition
+        return (new WeaponDefinition());
+    }
 }
