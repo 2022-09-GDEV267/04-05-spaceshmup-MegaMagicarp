@@ -14,8 +14,7 @@ namespace ShmupPlus
         public float fireRate = 0.3f; // Seconds/shot (Unused)
         public float health = 10;
         public int score = 100; // Points earned for destroying this
-        public float showDamageDuration = 0.1f; // # seconds to show damage
-        public float powerUpDropChance = 1f; // Chance to drop a power-up
+        public float showDamageDuration = 0.1f; // # seconds to show damage // a
 
         [Header("Set Dynamically: Enemy")]
         public Color[] originalColors;
@@ -90,6 +89,8 @@ namespace ShmupPlus
                     }
 
                     // Hurt this Enemy
+                    ShowDamage();
+
                     // Get the damage amount from the Main WEAP_DICT.
                     health -= Main.GetWeaponDefinition(p.type).damageOnHit;
 
