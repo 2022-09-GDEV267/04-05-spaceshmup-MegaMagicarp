@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -582,6 +582,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1342965580}
     m_Modifications:
     - target: {fileID: 1848849993518404, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
@@ -621,6 +622,7 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
 --- !u!114 &494030672 stripped
 MonoBehaviour:
@@ -645,6 +647,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1342965580}
     m_Modifications:
     - target: {fileID: 1848849993518404, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
@@ -684,6 +687,7 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
 --- !u!114 &511470548 stripped
 MonoBehaviour:
@@ -806,6 +810,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1342965580}
     m_Modifications:
     - target: {fileID: 1848849993518404, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
@@ -844,7 +849,9 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114684557380802588, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
 --- !u!850595691 &1127906489
 LightingSettings:
@@ -853,7 +860,7 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
-  serializedVersion: 4
+  serializedVersion: 5
   m_GIWorkflowMode: 0
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 0
@@ -893,7 +900,7 @@ LightingSettings:
   m_LightProbeSampleCountMultiplier: 4
   m_PVRBounces: 2
   m_PVRMinBounces: 2
-  m_PVREnvironmentMIS: 0
+  m_PVREnvironmentImportanceSampling: 0
   m_PVRFilteringMode: 2
   m_PVRDenoiserTypeDirect: 0
   m_PVRDenoiserTypeIndirect: 0
@@ -908,6 +915,7 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
+  m_NumRaysToShootPerTexel: -1
 --- !u!1 &1295224114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1088,7 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 40
   weapons:
-  - {fileID: 1374778674}
+  - {fileID: 0}
   - {fileID: 2031523527}
   - {fileID: 1808560890}
   - {fileID: 494030672}
@@ -1136,23 +1144,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 995000017}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1374778674 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114684557380802588, guid: d38b8bdef6bb4724e9a7341bda0aad27,
-    type: 3}
-  m_PrefabInstance: {fileID: 995000017}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4ce925c64fe0b428015d3d554582fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1808560889
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1342965580}
     m_Modifications:
     - target: {fileID: 1848849993518404, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
@@ -1192,6 +1189,7 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
 --- !u!114 &1808560890 stripped
 MonoBehaviour:
@@ -1345,6 +1343,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1342965580}
     m_Modifications:
     - target: {fileID: 1848849993518404, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
@@ -1384,6 +1383,7 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d38b8bdef6bb4724e9a7341bda0aad27, type: 3}
 --- !u!114 &2031523527 stripped
 MonoBehaviour:
