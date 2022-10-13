@@ -2,6 +2,7 @@
 using System.Collections.Generic;   // Required to use Lists or Dictionaries
 using UnityEngine;                  // Required for Unity
 using UnityEngine.SceneManagement;  // For loading & reloading of scenes
+using ShmupPlus;
 
 public class Main : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class Main : MonoBehaviour
 
     private BoundsCheck bndCheck;
 
-    public void shipDestroyed(Enemy e)
+    public void ShipDestroyed(Enemy e)
     {
         // Potentially generate a PowerUp
         if (Random.value <= e.powerUpDropChance)

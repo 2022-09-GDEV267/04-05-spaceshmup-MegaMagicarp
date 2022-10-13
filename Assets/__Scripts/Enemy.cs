@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace ShmupPlus
 {
-
     public class Enemy : MonoBehaviour
     {
 
