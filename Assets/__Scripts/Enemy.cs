@@ -14,7 +14,7 @@ namespace ShmupPlus
         public float fireRate = 0.3f; // Seconds/shot (Unused)
         public float health = 10;
         public int score = 100; // Points earned for destroying this
-        public float showDamageDuration = 0.1f; // # seconds to show damage // a
+        public float showDamageDuration = 0.1f; // # seconds to show damage
 
         [Header("Set Dynamically: Enemy")]
         public Color[] originalColors;
