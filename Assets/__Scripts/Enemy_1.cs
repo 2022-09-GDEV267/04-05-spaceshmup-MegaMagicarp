@@ -2,7 +2,6 @@ using ShmupPlus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 // Enemy_1 extends the Enemy class
 
