@@ -14,9 +14,8 @@ public enum WeaponType
     blaster,    // A simple blaster
     spread,     // Two shots simultaneously
     phaser,     // [NI] Shots that move in waves
-    missile,    // [NI] Homing missiles
-    laser,      // [NI]Damage over time
-    shield      // Raise shieldLevel
+    shield,      // Raise shieldLevel
+    Grow
 }
 
 [System.Serializable]

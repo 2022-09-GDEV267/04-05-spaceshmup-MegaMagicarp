@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +18,10 @@ public class Hero : MonoBehaviour
     public Weapon[] weapons;
 
     [Header("Set Dynamically")]
+
+    public bool big = false;
+    public GameObject grow;
+
     [SerializeField]
 
     private float _shieldLevel = 1; // Remember the underscore
@@ -66,7 +71,7 @@ public class Hero : MonoBehaviour
         }
     }
 
-void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         Transform rootT = other.gameObject.transform.root;
         GameObject go = rootT.gameObject;
@@ -83,6 +88,7 @@ void OnTriggerEnter(Collider other)
         if (go.tag == "Enemy")
         {  // If the shield was triggered by an enemy
             shieldLevel--;        // Decrease the level of the shield by 1
+            ResetSize();
             Destroy(go);          // … and Destroy the enemy
         }
         else if(go.tag == "PowerUp")
@@ -96,6 +102,13 @@ void OnTriggerEnter(Collider other)
         }
     }
 
+    private void ResetSize()
+    {
+        big = false;
+        grow = GameObject.Find("Hero");
+        grow.gameObject.transform.localScale += new Vector3(1, 1, 1);
+    }
+
     public void AbsorbPowerUp(GameObject go)
     {
         PowerUp pu = go.GetComponent<PowerUp>();
@@ -104,6 +117,13 @@ void OnTriggerEnter(Collider other)
         {
             case WeaponType.shield:
                 shieldLevel++;
+                break;
+
+            case WeaponType.Grow:
+                if (Hero.S.big == false)
+                {
+                    growBig();
+                }
                 break;
 
             default:
@@ -124,6 +144,12 @@ void OnTriggerEnter(Collider other)
                 break;
         }
         pu.AbsorbedBy(this.gameObject);
+    }
+
+    private void growBig()
+    {
+        big = true;
+        grow.gameObject.transform.localScale += new Vector3(2, 2, 2);
     }
 
     public float shieldLevel
