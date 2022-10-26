@@ -16,11 +16,11 @@ public class Hero : MonoBehaviour
     public GameObject projectilePrefab;
     public float projectileSpeed = 40;
     public Weapon[] weapons;
+    public float dmgMult;
 
     [Header("Set Dynamically")]
 
     public bool big = false;
-    public GameObject grow;
 
     [SerializeField]
 
@@ -37,6 +37,7 @@ public class Hero : MonoBehaviour
 
     void Start()
     {
+        dmgMult = 1f;
         if (S == null)
         {
             S = this; // Set the Singleton
@@ -104,9 +105,9 @@ public class Hero : MonoBehaviour
 
     private void ResetSize()
     {
+        dmgMult = 1f;
         big = false;
-        grow = GameObject.Find("Hero");
-        grow.gameObject.transform.localScale += new Vector3(1, 1, 1);
+        this.gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
     public void AbsorbPowerUp(GameObject go)
@@ -149,7 +150,8 @@ public class Hero : MonoBehaviour
     private void growBig()
     {
         big = true;
-        grow.gameObject.transform.localScale += new Vector3(2, 2, 2);
+        this.gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        dmgMult = 5f;
     }
 
     public float shieldLevel

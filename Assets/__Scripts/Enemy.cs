@@ -92,7 +92,7 @@ namespace ShmupPlus
                     ShowDamage();
 
                     // Get the damage amount from the Main WEAP_DICT.
-                    health -= Main.GetWeaponDefinition(p.type).damageOnHit;
+                    health -= Main.GetWeaponDefinition(p.type).damageOnHit * Hero.S.dmgMult;
 
                     if (health <= 0)
                     {
